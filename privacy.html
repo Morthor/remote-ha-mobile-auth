@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy policy — Remote HA Mobile</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+        line-height: 1.55;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 48rem;
+        padding: 3rem 1.25rem;
+      }
+      h1, h2 {
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p><a href="./">Remote HA Mobile</a></p>
+      <h1>Privacy policy</h1>
+      <p><strong>Last updated:</strong> 11 October 2026</p>
+      <p>
+        Remote HA Mobile is a direct client for the Home Assistant server chosen
+        by the user. It has no Remote HA account, advertising SDK, telemetry,
+        crash-reporting service, or usage analytics.
+      </p>
+
+      <h2>Data stored on the phone</h2>
+      <ul>
+        <li>
+          Home Assistant local and remote addresses, trusted Wi-Fi names,
+          routing mode, and dashboard customization are stored in Android app
+          preferences.
+        </li>
+        <li>
+          Home Assistant credentials and the optional editing PIN are stored
+          using Android secure storage and are not displayed again by the app.
+        </li>
+        <li>
+          Configuration exports contain routing and dashboard settings, but
+          never Home Assistant credentials or the editing PIN.
+        </li>
+        <li>Android backups are disabled for the application.</li>
+      </ul>
+
+      <h2>Data used while the app runs</h2>
+      <ul>
+        <li>
+          Home Assistant entity state, registry, calendar, weather, and camera
+          data are requested directly from the server selected by the user.
+          They are used to render the dashboard and are not forwarded to the
+          developer or another Remote HA service.
+        </li>
+        <li>
+          Wi-Fi name access is used only to choose between configured local and
+          remote addresses. Android may require location permission and enabled
+          location services to reveal that name. When it is unavailable,
+          automatic routing uses the configured remote address.
+        </li>
+        <li>
+          Optional local doorbell notifications are generated from Home
+          Assistant events while the app process is running. Reliable delivery
+          after Android closes this app can use the separately installed
+          official Home Assistant Companion app. Remote HA Mobile does not run
+          a push server or receive that notification's contents.
+        </li>
+      </ul>
+
+      <h2>User control and deletion</h2>
+      <p>
+        Connection settings and dashboard configuration can be exported without
+        credentials. Uninstalling the app clears its preferences and secure
+        storage under normal Android application-management behavior. Users can
+        also log out in the app or revoke its Home Assistant token from their
+        Home Assistant profile. Because Remote HA Mobile has no developer-held
+        account or cloud database, there is no separate developer-side account
+        or personal-data record to delete.
+      </p>
+
+      <h2>Support</h2>
+      <p>
+        Questions about this policy can be submitted through the
+        <a href="support.html">support page</a>. Do not include credentials,
+        private addresses, Wi-Fi names, entity identifiers, household addresses,
+        or camera imagery in a public report.
+      </p>
+    </main>
+  </body>
+</html>

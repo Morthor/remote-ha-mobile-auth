@@ -1,0 +1,53 @@
+name: Support request
+description: Report a reproducible Remote HA Mobile problem without household secrets.
+title: "[Support]: "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include access tokens, passwords, private URLs, Wi-Fi names, entity IDs, camera images, or household addresses. Use the app's privacy-safe diagnostics export and review attachments before uploading them.
+  - type: input
+    id: version
+    attributes:
+      label: App version and build
+      placeholder: 0.2.2-dev (26)
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version and device class
+      placeholder: Android 16, modern phone
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: Route shown by the app
+      options:
+        - Local
+        - VPN
+        - Offline or unknown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Explain what you did, what happened, and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Privacy-safe diagnostics
+      description: Attach or paste the diagnostics exported by the app after reviewing them.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I checked this report and its attachments for household secrets and imagery.
+          required: true
