@@ -32,11 +32,72 @@ body:
         - Offline or unknown
     validations:
       required: true
+  - type: dropdown
+    id: permission_level
+    attributes:
+      label: Home Assistant permission level
+      description: Do not include a username, role name, or household details.
+      options:
+        - Administrator
+        - Restricted non-administrator
+        - Partial area or entity visibility
+        - Unknown or not applicable
+    validations:
+      required: true
+  - type: dropdown
+    id: transition
+    attributes:
+      label: Network or lifecycle transition
+      options:
+        - None or steady connection
+        - Wi-Fi access-point handoff
+        - Local to VPN or remote
+        - VPN or remote to local
+        - Mobile data transition
+        - Foreground or background resume
+        - Cold or offline start
+        - Other
+    validations:
+      required: true
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: Explain what you did, what happened, and what you expected.
+      description: List the smallest repeatable sequence without naming private devices or entities.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Once
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Daily-control impact
+      options:
+        - Blocks a safe daily control or causes data loss
+        - Major problem with a workaround
+        - Minor problem
+        - Suggestion only
     validations:
       required: true
   - type: textarea
